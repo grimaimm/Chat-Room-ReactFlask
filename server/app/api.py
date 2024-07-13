@@ -1,4 +1,5 @@
 from flask import Blueprint, request, jsonify, current_app, send_from_directory
+from flask_socketio import emit
 import os
 
 main = Blueprint('main', __name__, 
@@ -23,7 +24,6 @@ def post_message():
     messages_ref.add(data)
     return jsonify({"success": True})
 
-
 @main.route("/", defaults={'path':''})
 @main.route('/<path:path>')
 def serve(path):
@@ -31,3 +31,7 @@ def serve(path):
         return send_from_directory(main.static_folder, path)
     else:
         return send_from_directory(main.static_folder, 'index.html')
+    
+@main.route('/socket.io')
+def socketio():
+    return current_app.socketio
