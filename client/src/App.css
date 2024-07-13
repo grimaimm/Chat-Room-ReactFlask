@@ -1,0 +1,32 @@
+.App {
+  border-radius: 16px;
+  background: #e0e0e0;
+  box-shadow:  20px 20px 60px #bebebe,
+              -20px -20px 60px #ffffff;
+}
+
+.chat-container {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.messages {
+  flex: 1;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.message-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.message-form input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.sign-out {
+  margin-top: 10px;
+}
+

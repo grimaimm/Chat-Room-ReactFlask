@@ -1,6 +1,6 @@
 /node_modules
-/public
-/src
-package-lock.json
-package.json
-tailwind.config.json
+# /public
+# /src
+# package-lock.json
+# package.json
+# tailwind.config.json
