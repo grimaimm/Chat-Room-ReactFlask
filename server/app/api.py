@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify, current_app, send_from_directory
-from flask_socketio import emit
+# from flask_socketio import emit
 import os
 
 main = Blueprint('main', __name__, 
@@ -32,6 +32,6 @@ def serve(path):
     else:
         return send_from_directory(main.static_folder, 'index.html')
     
-@main.route('/socket.io')
-def socketio():
-    return current_app.socketio
+# @main.route('/socket.io')
+# def socketio():
+#     return current_app.socketio
