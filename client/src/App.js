@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { auth } from './components/Auth/getAuth';
 import { onAuthStateChanged } from 'firebase/auth';
 import TitlePage from './components/Commons/titlePage';
-import ChatMessages from './components/Auth/chatMessages';
+import ChatMessages from './components/Auth/chatMessagesThree';
 import LoginUser from './components/Buttons/buttonLogin';
 import Skeleton from 'react-loading-skeleton';
 

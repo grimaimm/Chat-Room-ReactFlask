@@ -14,7 +14,7 @@ const ChatMessages = ({ user }) => {
   const [userPhotos, setUserPhotos] = useState({});
 
   useEffect(() => {
-    axios.get('https://unforaimv1.pythonanywhere.com/messages')
+    axios.get('http://localhost:4011/messages')
       .then(response => {
         const sortedMessages = response.data.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
         setMessages(sortedMessages);
@@ -44,7 +44,7 @@ const ChatMessages = ({ user }) => {
         timestamp: new Date().toISOString()
       };
 
-      axios.post('https://unforaimv1.pythonanywhere.com/messages', message)
+      axios.post('http://localhost:4011/messages', message)
         .then(response => {
           const updatedMessages = [message, ...messages];
           const sortedMessages = updatedMessages.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));

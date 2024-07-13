@@ -13,7 +13,9 @@ def get_messages():
     docs = messages_ref.stream()
     messages = []
     for doc in docs:
-        messages.append(doc.to_dict())
+        message = doc.to_dict()
+        message['id'] = doc.id  # Include the document ID
+        messages.append(message)
     return jsonify(messages)
 
 @main.route('/messages', methods=['POST'])
@@ -23,6 +25,24 @@ def post_message():
     messages_ref = db.collection('messages')
     messages_ref.add(data)
     return jsonify({"success": True})
+
+# @main.route('/messages', methods=['GET'])
+# def get_messages():
+#     db = current_app.db
+#     messages_ref = db.collection('messages')
+#     docs = messages_ref.stream()
+#     messages = []
+#     for doc in docs:
+#         messages.append(doc.to_dict())
+#     return jsonify(messages)
+
+# @main.route('/messages', methods=['POST'])
+# def post_message():
+#     db = current_app.db
+#     data = request.get_json()
+#     messages_ref = db.collection('messages')
+#     messages_ref.add(data)
+#     return jsonify({"success": True})
 
 @main.route("/", defaults={'path':''})
 @main.route('/<path:path>')

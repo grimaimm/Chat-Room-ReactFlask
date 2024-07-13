@@ -14,12 +14,22 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
+// const app = initializeApp(firebaseConfig)
+
+// const auth = getAuth(app);
+// const googleProvider = new GoogleAuthProvider();
+
+// export { auth, googleProvider };
+// export const db = getFirestore(app);
+// export default app;
+
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
+const db = getFirestore(app); // Initialize Firestore
 
-export { auth, googleProvider };
-export const db = getFirestore(app);
+export { auth, googleProvider, db };
 export default app;
 
