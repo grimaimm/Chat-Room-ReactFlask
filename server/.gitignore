@@ -3,3 +3,5 @@
 *.pyc
 app/__pycache__/
 instance/serviceAccountKey.json
+instance/fetch.py
+instance/serviceAccountKeyV2.json

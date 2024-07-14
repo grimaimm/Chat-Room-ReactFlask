@@ -16,27 +16,17 @@ const SignOutButton = () => {
   return (
       <button
         onClick={signOut}
-        className="flex cursor-pointer items-center gap-1 font-medium text-red-500"
+        className="flex cursor-pointer justify-center items-center rounded-full w-11 h-11 font-medium text-red-500"
         data-umami-event="Sign Out from Chat Page"
       >
-        <svg
-          stroke="currentColor"
-          fill="none"
-          strokeWidth={2}
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          className="cursor-pointer text-red-500"
-          height={16}
-          width={16}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-          />
+        <svg width={20} height={20} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M15 16.5V19C15 20.1046 14.1046 21 13 21H6C4.89543 21 4 20.1046 4 19V5C4 3.89543 4.89543 3 6 3H13C14.1046 3 15 3.89543 15 5V8.0625M11 12H21M21 12L18.5 9.5M21 12L18.5 14.5" stroke="#ef4444" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </g>
         </svg>
-        <span>Sign Out</span>
+        {/* <span>Sign Out</span> */}
       </button>
   );
 };

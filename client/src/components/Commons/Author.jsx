@@ -2,7 +2,7 @@ import React from 'react'
 
 const AuthorIcon = () => {
   return (
-    <div className="text-medium flex items-center gap-0.5 rounded-full bg-gradient-to-bl from-purple-800 via-violet-900 to-purple-800 px-1.5 py-0.5 text-violet-50">
+    <div className="text-medium flex items-center gap-0.5 rounded-full bg-gradient-to-bl from-[#3d91f4] via-[#3d91f4] to-[#3d91f4] px-1.5 py-[1px] text-violet-50">
       <svg
         stroke="currentColor"
         fill="currentColor"

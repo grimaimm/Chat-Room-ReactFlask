@@ -9,7 +9,7 @@ const UserImage = ({ alt, src }) => {
             height="40"
             decoding="async"
             data-nimg="1"
-            className="mt-1 rounded-full border dark:border-neutral-800"
+            className="mt-[4px] rounded-full md:w-10 md:h-10 h-8 w-8"
             src={src}
         />
     );

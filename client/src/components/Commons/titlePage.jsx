@@ -2,9 +2,9 @@ import React from 'react';
 
 const TitlePage = () => {
   return (
-    <div className='p-4'>
-      <h1 class="text-2xl font-medium">Chat Room with ReactFlask</h1>
-      <p class="border-b border-dashed border-neutral-600 pb-6 pt-2 text-neutral-600">Leave whatever you like to say, suggestions, questions or anything!</p>
+    <div className='title-page p-6 text-center bg-[#121212] rounded-xl mb-2'>
+      <h1 class="text-2xl font-medium text-white">Chat Room with ReactFlask</h1>
+      <p class="pt-2 text-[#a7a7a7]">Leave whatever you like to say, suggestions, questions or anything!</p>
     </div>
   );
 };

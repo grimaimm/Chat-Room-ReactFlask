@@ -2,7 +2,7 @@ import React from 'react';
 
 const Username = ({ displayName }) => {
     return (
-        <div className="text-sm font-medium text-neutral-800">{displayName}</div>
+        <div className="text-sm font-medium text-[#f9f9f9]">{displayName}</div>
     );
 };
 
